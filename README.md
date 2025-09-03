@@ -53,10 +53,19 @@ Modern computers often have multiple CPU cores, but not all programs automatical
   - This limits performance gains from threads on heavy computations.  
 
 ---
+## 📊 Interpreting Results
 
-## 🧩 Patterns Demonstrated
+  - Always compare parallel execution against a serial baseline.
 
-### Serial Execution
-Tasks are executed one after another:
-```python
-results = [work(x) for x in data]
+  - Increasing the number of workers helps only up to a certain point.
+
+  - Speedup = Serial Time ÷ Parallel Time
+
+  - Efficiency = Speedup ÷ Number of Workers
+
+  - Overheads (process startup, data transfer, scheduling) can sometimes outweigh benefits.
+
+---
+
+
+
